@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      body, html{
+        background: #FF4136;
+        margin: 0;
+      }
+      input{
+        height: 70px;
+        width: 560px;
+        border: none;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        color: black;
+        font-family: roboto;
+        font-size: 30px;
+        padding: 10px;
+        placeholder-color: #f5f5f5;
+        text-align: center;
+
+      }
+      #skeleton{
+        position : fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: white;
+        font-family: spartan;
+        font-size: 50px;
+      }
+      #spacer{
+        height: 20px;
+      }
+      #submit{
+        width: 130px;
+        height: 50px;
+        background-color: white;
+        font-family: spartan;
+        color: #FF4136;
+        border: none;
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+      }
+      #submit:hover{
+        background-color: #FF4136;
+        color: white;
+
+      }
+      #reset{
+        width: 130px;
+        height: 50px;
+        font-family: spartan;
+        color: white;
+        border: none;
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        float: right;
+        background-opacity: 0;
+      }
+      #reset:hover{
+
+        opacity: 0.5;
+
+      }
+      #tensenotify{
+        color: white;
+        font-family: spartan;
+        font-size: 30px;
+
+      }
+      @font-face {
+        font-family: Roboto;
+        src: url(roboto.ttf);
+      }
+      @font-face {
+        font-family: spartan;
+        src: url('bold.ttf');
+      }
+      "correct" : {
+        url : "correct.mp3"
+      },
+      "wrong" : {
+        url : "wrong.mp3",
+      }
+    </style>
+  </head>
+  <body>
+    <div id="skeleton">
+
+      <div id="tensenotify">Pretérito Indefinido</div>
+
+      <div id="spacer">
+        </div>
+
+      <div id="q"></div>
+
+      <div id="spacer">
+        </div>
+      <input  id="textcollector" type="text" placeholder="Eg: Hablas..."/>
+
+      <div id="spacer">
+        </div>
+
+        <button id="submit" onclick="checker()">Submit</button>
+
+        <div id="reset" onclick="reset()">Reset</div>
+
+    </div>
+
+    <audio id="correctAudio">
+      <source src="correct.mp3">
+      </audio>
+
+      <audio id="wrongAudio">
+        <source src="wrong.mp3">
+        </audio>
+
+      <script src='preterito_indefinido.js'>
+        </script>
+
+    </body>
+</html>

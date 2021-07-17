@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>VerboPro</title>
+    <meta charset="utf-8">
+    <style>
+    body, html{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    iframe{
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    #navpointer{
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    img{
+      height: 20px;
+      width: auto;
+    }
+    td{
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-bottom: 10px;
+      color: white;
+      font-family: spartan;
+    }
+    @font-face {
+      font-family: roboto;
+      src: url('roboto.ttf');
+    }
+    @font-face {
+      font-family: spartan;
+      src: url('bold.ttf');
+    }
+    </style>
+  </head>
+  <body onscroll="scrollcheck()">
+    <iframe src="about.html" id="0">
+    </iframe>
+
+    <iframe src="home.html" id="1">
+    </iframe>
+
+    <iframe src="presente.html" id="2">
+    </iframe>
+
+    <iframe src="preterito_indefinido.html" id="3">
+    </iframe>
+
+    <iframe src="condicional.html" id="4">
+    </iframe>
+
+    <iframe src="futuro.html" id="5">
+    </iframe>
+
+    <div id="navpointer">
+    <table>
+      <tr>
+        <td><img id="pointer1" onmousemove="selectedPointer1()" onmouseout="pointer1()" onclick="locate1()"></td>
+        <td id="title1"></td>
+      </tr>
+      <tr>
+        <td><img id="pointer2" onmousemove="selectedPointer2()" onmouseout="pointer2()" onclick="locate2()"></td>
+        <td id="title2"></td>
+      </tr>
+      <tr>
+        <td><img id="pointer3" onmousemove="selectedPointer3()" onmouseout="pointer3()" onclick="locate3()"></td>
+        <td id="title3"></td>
+      </tr>
+      <tr>
+        <td><img id="pointer4" onmousemove="selectedPointer4()" onmouseout="pointer4()" onclick="locate4()"></td>
+        <td id="title4"></td>
+      </tr>
+      <tr>
+        <td><img id="pointer5" onmousemove="selectedPointer5()" onmouseout="pointer5()" onclick="locate5()"></td>
+        <td id="title5"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="index.js"></script>
+
+  </body>
+</html>
